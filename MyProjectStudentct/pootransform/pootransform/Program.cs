@@ -5,6 +5,8 @@ bool running = true;
 int operationInput;
 int subMenuInput;
 
+
+
 List<Student> students = new List<Student>();
 List<Subject> subjects = new List<Subject>();
 List<Attendance> attendances = new List<Attendance>();
@@ -678,13 +680,24 @@ while (running)
 				Console.WriteLine("Invalid option.");
 				break;
 			}
-	}
-}
-}
-catch (Exception ex)
+
+	     }
+     }
+
+internal class Attendance
 {
-	Console.WriteLine($"An error occurred: {ex.Message}");
+	internal int SubjectId;
+
+	public int Id { get; internal set; }
+	public int StudentId { get; internal set; }
+	public string? Date { get; internal set; }
+	public bool Status { get; internal set; }
 }
 
+internal class Subject
+{
+	internal int Id;
+	internal string? Teacher;
 
-
+	public string? Name { get; internal set; }
+}
